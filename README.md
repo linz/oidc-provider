@@ -1,6 +1,4 @@
-![Python Template - Hello World Banner](https://raw.githubusercontent.com/linz/template-python-hello-world/master/docs/_static/banner.png)
-
-### _A minimal template for Python development_
+# OIDC Provider
 
 [![GitHub Actions Status](https://github.com/linz/template-python-hello-world/workflows/Build/badge.svg)](https://github.com/linz/template-python-hello-world/actions)
 [![Alerts](https://badgen.net/lgtm/alerts/g/linz/template-python-hello-world?labelColor=2e3a44&label=Alerts&color=3dc64b)](https://lgtm.com/projects/g/linz/template-python-hello-world/context:python)
@@ -15,9 +13,33 @@
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 [![Code Style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-## Why?
+**OIDC** (OpenID Connect) can be used within _GitHub workflows_ to authenticate with Amazon Web Services. 
+This eliminates the need to store AWS credentials as long-lived GitHub secrets.
 
-This repository exists to show a working example of Python formatting, linting and import sorting configurations with continuous integration.
+This stack enables OpenID Connect in Amazon Web Services. 
+It only needs to be deployed once per AWS account and can be accessed by one or more GitHub repositories. 
+Restrictions can be put in place based on a specific repo, event, branch, or tag. 
+Please refer to [GitHub Documentation](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect#example-subject-claims) for further information.
+
+A single AWS role is created as part of this stack. 
+This role is assumed by GitHub actions during workflow execution to deploy the required AWS resources. 
+Role policy should specify which AWS resources GitHub actions has access to. 
+It is possible to create more than one role using this stack. 
+This can be useful in cases where there are multiple repositories requiring limited access to AWS resources (e.g. s3), 
+since restrictions can be granted on a granular level. 
+
+
+### Prerequisites
+- An AWS account to deploy this stack.
+- GitHub repo requiring access to AWS using OIDC. Please specify a branch, event or tag for more granular restrictions. This is needed to prevent untrusted workflows or repositories from requesting access token to AWS resources.
+- AWS role policy. This specifies the level of access GitHub actions has on AWS. It is possible to reference existing AWS managed policy, or create your own custom inline policy for bespoke access. 
+
+
+### How to Deploy
+cdk deploy --profile <profile-name>
+
+
+
 
 ## Structure
 
