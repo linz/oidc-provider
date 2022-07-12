@@ -1,7 +1,7 @@
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "2a5bc523fb60df1ff1d3ecac3bd23961e068017cc27b32dc60f8f01283adc0f2"
+content-hash = "8f106ea9c6fcd79a533a10e9ad71bcc3d03607ac9b680c37c39cf075184951a7"
 
 [metadata.files]
 arrow = []
@@ -19,7 +19,6 @@ colorama = []
 config-formatter = []
 configupdater = []
 constructs = []
-coverage = []
 dill = []
 distlib = []
 exceptiongroup = []
@@ -241,17 +240,6 @@ jsii = ">=1.60.1,<2.0.0"
 publication = ">=0.0.3"
 
 [[package]]
-name = "coverage"
-version = "6.4.1"
-description = "Code coverage measurement for Python"
-category = "dev"
-optional = false
-python-versions = ">=3.7"
-
-[package.extras]
-toml = ["tomli"]
-
-[[package]]
 name = "dill"
 version = "0.3.5.1"
 description = "serialize all of python"
@@ -372,7 +360,7 @@ plugins = ["setuptools"]
 
 [[package]]
 name = "jsii"
-version = "1.61.0"
+version = "1.62.0"
 description = "Python client for jsii runtime"
 category = "main"
 optional = false
@@ -711,7 +699,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "typer"
-version = "0.5.0"
+version = "0.6.1"
 description = "Typer, build great CLIs. Easy to code. Based on Python type hints."
 category = "main"
 optional = false
