@@ -29,6 +29,7 @@ poetryEnv.env.overrideAttrs (
   oldAttrs: {
     buildInputs = [
       pkgs.cacert
+      pkgs.cargo
       pkgs.gitFull
       pkgs.nodejs
       (pkgs.poetry.override {
