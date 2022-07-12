@@ -49,6 +49,12 @@ repos:
         stages: [commit]
         types: [python]
 
+  - repo: https://github.com/nix-community/nixpkgs-fmt
+    rev: 6740ea881d3ac5942d4fbf124f5956b896666c76 # v1.3.0
+    hooks:
+      - id: nixpkgs-fmt
+        stages: [commit]
+
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: a99a3fbe79a9d346cabd02a5e167ad0edafe616b # v2.3.0
     hooks:
