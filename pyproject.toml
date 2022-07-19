@@ -45,7 +45,6 @@ typer = "*"
 
 [tool.poetry.dev-dependencies]
 black = "*"
-coverage = "*"
 gitlint = "*"
 isort = "*"
 language-formatters-pre-commit-hooks = "*"

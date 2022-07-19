@@ -1,6 +1,3 @@
-/.coverage
-/html/
-/htmlcov/
 /.idea
 *.pyc
 __pycache__
