@@ -2,7 +2,7 @@
 
 Prerequisites:
 
-- Python 3.7 through 3.10 (this can be changed in `.python-version` and `pyproject.toml`)
+- Python 3.10
 - [Poetry](https://python-poetry.org/docs/#installation)
 
 Optional dependencies:
