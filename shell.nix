@@ -9,7 +9,7 @@
     { }
 }:
 let
-  python = pkgs.python3;
+  python = pkgs.python310;
   projectDir = builtins.path {
     path = ./.;
     name = "oidc-provider";
