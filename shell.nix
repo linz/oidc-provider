@@ -17,11 +17,29 @@ let
 
   poetryEnv = pkgs.poetry2nix.mkPoetryEnv {
     inherit python projectDir;
+    preferWheels = true;
     overrides = pkgs.poetry2nix.overrides.withDefaults (self: super: {
-      mypy = super.mypy.overridePythonAttrs (old: {
-        patches = [ ];
-        MYPY_USE_MYPYC = false;
-      });
+      astroid = super.astroid.overridePythonAttrs (
+        old: rec {
+          buildInputs = (old.buildInputs or [ ]) ++ [ self.typing-extensions ];
+        }
+      );
+      black = super.black.overridePythonAttrs (
+        old: {
+          buildInputs = (old.buildInputs or [ ]) ++ [ self.typing-extensions ];
+        }
+      );
+      mypy = super.mypy.overridePythonAttrs (
+        old: {
+          patches = [ ];
+          MYPY_USE_MYPYC = false;
+        }
+      );
+      pylint = super.pylint.overridePythonAttrs (
+        old: rec {
+          buildInputs = (old.buildInputs or [ ]) ++ [ self.typing-extensions ];
+        }
+      );
     });
   };
 in
