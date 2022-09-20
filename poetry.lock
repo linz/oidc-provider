@@ -40,7 +40,7 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 
 [[package]]
 name = "aws-cdk-lib"
-version = "2.40.0"
+version = "2.42.1"
 description = "Version 2 of the AWS Cloud Development Kit library"
 category = "main"
 optional = false
@@ -48,7 +48,7 @@ python-versions = "~=3.7"
 
 [package.dependencies]
 constructs = ">=10.0.0,<11.0.0"
-jsii = ">=1.66.0,<2.0.0"
+jsii = ">=1.67.0,<2.0.0"
 publication = ">=0.0.3"
 typeguard = ">=2.13.3,<2.14.0"
 
@@ -706,7 +706,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "60d0d2c248c047c359549f409ddbc1e98d1a1fed80a58b902887a8eb1007fe3e"
+content-hash = "9430ecdfe087048d3211a9115b1b07b4c74e829c3ea30d06748ffd9e18045dc0"
 
 [metadata.files]
 arrow = [
@@ -722,8 +722,8 @@ attrs = [
     {file = "attrs-21.4.0.tar.gz", hash = "sha256:626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"},
 ]
 aws-cdk-lib = [
-    {file = "aws-cdk-lib-2.40.0.tar.gz", hash = "sha256:0a4c2c9ad95e126b4a157134f968c7d0bcd74b6bd91f208be72aa562952114ce"},
-    {file = "aws_cdk_lib-2.40.0-py3-none-any.whl", hash = "sha256:376c64aefe5971c121c6098ab7fd7efa7a61a9caa8f1b9deeeb87c1a5a768318"},
+    {file = "aws-cdk-lib-2.42.1.tar.gz", hash = "sha256:dfdac6177cd4702fa5a5102f82ea5ea7aa2620c85628334b89e56c7954dc9262"},
+    {file = "aws_cdk_lib-2.42.1-py3-none-any.whl", hash = "sha256:e49aa4bec65d53cec4633f0ce7dd1733e84a5f67333cd656c7549cc058c21d46"},
 ]
 black = [
     {file = "black-22.8.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:ce957f1d6b78a8a231b18e0dd2d94a33d2ba738cd88a7fe64f53f659eea49fdd"},
