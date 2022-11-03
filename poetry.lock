@@ -40,7 +40,7 @@ tests-no-zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy"
 
 [[package]]
 name = "aws-cdk-lib"
-version = "2.42.1"
+version = "2.50.0"
 description = "Version 2 of the AWS Cloud Development Kit library"
 category = "main"
 optional = false
@@ -48,7 +48,7 @@ python-versions = "~=3.7"
 
 [package.dependencies]
 constructs = ">=10.0.0,<11.0.0"
-jsii = ">=1.67.0,<2.0.0"
+jsii = ">=1.69.0,<2.0.0"
 publication = ">=0.0.3"
 typeguard = ">=2.13.3,<2.14.0"
 
@@ -289,7 +289,7 @@ requirements-deprecated-finder = ["pip-api", "pipreqs"]
 
 [[package]]
 name = "jsii"
-version = "1.67.0"
+version = "1.70.0"
 description = "Python client for jsii runtime"
 category = "main"
 optional = false
@@ -297,7 +297,7 @@ python-versions = "~=3.7"
 
 [package.dependencies]
 attrs = ">=21.2,<23.0"
-cattrs = ">=1.8,<22.2"
+cattrs = ">=1.8,<22.3"
 publication = ">=0.0.3"
 python-dateutil = "*"
 typeguard = ">=2.13.3,<2.14.0"
@@ -698,7 +698,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "9430ecdfe087048d3211a9115b1b07b4c74e829c3ea30d06748ffd9e18045dc0"
+content-hash = "7d18b3985b576747c02e129de8df7c7a60ff5aa39baf53e0134500cbc226a571"
 
 [metadata.files]
 arrow = [
@@ -714,8 +714,8 @@ attrs = [
     {file = "attrs-21.4.0.tar.gz", hash = "sha256:626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"},
 ]
 aws-cdk-lib = [
-    {file = "aws-cdk-lib-2.42.1.tar.gz", hash = "sha256:dfdac6177cd4702fa5a5102f82ea5ea7aa2620c85628334b89e56c7954dc9262"},
-    {file = "aws_cdk_lib-2.42.1-py3-none-any.whl", hash = "sha256:e49aa4bec65d53cec4633f0ce7dd1733e84a5f67333cd656c7549cc058c21d46"},
+    {file = "aws-cdk-lib-2.50.0.tar.gz", hash = "sha256:60a44b4045cbe1ab33e001d62ded579a45b5f6b011c612f6804c109666807918"},
+    {file = "aws_cdk_lib-2.50.0-py3-none-any.whl", hash = "sha256:8f9157c906485308631edbf398a77641e5986aaccba73c3254502138a340a79a"},
 ]
 black = [
     {file = "black-22.10.0-1fixedarch-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:5cc42ca67989e9c3cf859e84c2bf014f6633db63d1cbdf8fdb666dcd9e77e3fa"},
@@ -817,8 +817,8 @@ isort = [
     {file = "isort-5.10.1.tar.gz", hash = "sha256:e8443a5e7a020e9d7f97f1d7d9cd17c88bcb3bc7e218bf9cf5095fe550be2951"},
 ]
 jsii = [
-    {file = "jsii-1.67.0-py3-none-any.whl", hash = "sha256:a4868f8ae05ff62fef328dd197d5834c0f3c291948a1768ad931f1fc05935cb2"},
-    {file = "jsii-1.67.0.tar.gz", hash = "sha256:ca16eb9c15377b77d10942439b089a10eb9657bffc63559c7a08bb7141cacc0c"},
+    {file = "jsii-1.70.0-py3-none-any.whl", hash = "sha256:d0867c0d2f60ceda1664c026033ae34ea36178c7027315e577ded13043827664"},
+    {file = "jsii-1.70.0.tar.gz", hash = "sha256:9fc57ff37868364ba3417b26dc97189cd0cc71282196a3f4765768c067354be0"},
 ]
 language-formatters-pre-commit-hooks = [
     {file = "language_formatters_pre_commit_hooks-2.4.0-py2.py3-none-any.whl", hash = "sha256:76306202785bedbec0ce90965f9f1fdd240fac5977beb86ad2843a8c9a59241d"},
