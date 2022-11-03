@@ -15,11 +15,13 @@ show_error_codes = true
 strict = true
 
 [tool.poetry]
-name = "template-python-hello-world"
+name = "oidc-provider"
 version = "0.1.0"
-description = "A minimal template for Python development"
+description = "AWS Python CDK Template for deploying OIDC provider"
 authors = [
+    "Amrou Emad <aemad@linz.govt.nz>",
     "Ben Cheng <42329567+Ben-Cheng@users.noreply.github.com>",
+    "Bill Nelson <bmnelson@linz.govt.nz>",
     "Blayne Chard <bchard@linz.govt.nz>",
     "Daniel Silk <dsilk@linz.govt.nz>",
     "Jim Gan <jgan@linz.govt.nz>",
