@@ -1,4 +1,7 @@
 {
+  "dependencies": {
+    "aws-cdk": "*"
+  },
   "prettier": {
     "printWidth": 100,
     "proseWrap": "always",
