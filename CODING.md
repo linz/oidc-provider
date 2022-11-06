@@ -7,7 +7,8 @@ Prerequisites:
 
 Optional dependencies:
 
-- [Pyenv](https://github.com/pyenv/pyenv) to use the reference Python version in `pyproject.toml` with a simple `pyenv install`
+- [Pyenv](https://github.com/pyenv/pyenv) to use the reference Python version in `pyproject.toml`
+  with a simple `pyenv install`
 
 Install the project dependencies:
 
@@ -15,7 +16,8 @@ Install the project dependencies:
 poetry install
 ```
 
-Install commit-msg git hook. It runs on every local commit to check if the commit message conforms to the convention specified in `.gitlint`
+Install commit-msg git hook. It runs on every local commit to check if the commit message conforms
+to the convention specified in `.gitlint`
 
 ```bash
 pre-commit install --hook-type commit-msg --overwrite
