@@ -10,30 +10,28 @@ jobs:
   build:
     strategy:
       fail-fast: false
-      matrix:
-        os:
-          - ubuntu-20.04
-          - ubuntu-22.04
-        python:
-          - '3.10'
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3.1.0
         with:
           fetch-depth: 0
 
+      - id: python-version
+        run: echo "::set-output name=id::$(cat .python-version)"
+
       - name: Setup Python ${{ matrix.python }}
         uses: actions/setup-python@v4.3.0
         with:
-          python-version: ${{ matrix.python }}
+          python-version: ${{ steps.python-version.outputs.id }}
 
       - uses: actions/cache@v3.0.11
         with:
           path: ~/.cache/pip
           key:
-            ${{ matrix.os }}-pip-${{ secrets.CACHE_SEED }}-${{ matrix.python }}-${{
-            hashFiles('./poetry.lock') }}
-          restore-keys: ${{ matrix.os }}-pip-${{ secrets.CACHE_SEED }}-${{ matrix.python }}-
+            ${{ runner.os }}-pip-${{ secrets.CACHE_SEED }}-${{ steps.python-version.outputs.id
+            }}-${{ hashFiles('./poetry.lock') }}
+          restore-keys:
+            ${{ runner.os }}-pip-${{ secrets.CACHE_SEED }}-${{ steps.python-version.outputs.id }}-
 
       - name: Upgrade pip
         run: python -m pip install --upgrade pip
