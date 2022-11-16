@@ -10,13 +10,13 @@ let
       )
       { };
   python = pkgs.python310;
-  projectDir = builtins.path {
-    path = ./.;
-    name = "oidc-provider";
-  };
 
   poetryEnv = pkgs.poetry2nix.mkPoetryEnv {
-    inherit python projectDir;
+    inherit python;
+    projectDir = builtins.path {
+      path = ./.;
+      name = "oidc-provider";
+    };
     preferWheels = true;
   };
 in
