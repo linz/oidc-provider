@@ -33,7 +33,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.10"
 typer = "*"
-aws-cdk-lib = "^2.50.0"
+aws-cdk-lib = "^2.56.0"
 
 [tool.poetry.dev-dependencies]
 black = "*"
