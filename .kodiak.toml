@@ -8,6 +8,7 @@ method = "squash"
 automerge_label = "automerge 🚀"
 
 [merge.automerge_dependencies]
+versions = ["major", "minor", "patch"]
 usernames = ["dependabot"]
 
 [merge.message]
