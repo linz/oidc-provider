@@ -486,14 +486,14 @@ typing-extensions = ">=3.7,<5.0"
 
 [[package]]
 name = "language-formatters-pre-commit-hooks"
-version = "2.5.0"
+version = "2.7.0"
 description = "List of pre-commit hooks meant to format your source code."
 category = "dev"
 optional = false
 python-versions = "*"
 files = [
-    {file = "language_formatters_pre_commit_hooks-2.5.0-py2.py3-none-any.whl", hash = "sha256:7f4b4a84ea5818c79ca5bbafe1f218c3b720f8b8c28adf37196cab105bb63c0c"},
-    {file = "language_formatters_pre_commit_hooks-2.5.0.tar.gz", hash = "sha256:a74c28bc86aebb213802159e68a852ee15e48048e9140dcb64d5c9d7ab8083fe"},
+    {file = "language_formatters_pre_commit_hooks-2.7.0-py2.py3-none-any.whl", hash = "sha256:0f182f1292ffc7eb8cd87c73944748e5eab88e8a33cb191ccdc469518f098d89"},
+    {file = "language_formatters_pre_commit_hooks-2.7.0.tar.gz", hash = "sha256:dbb28e380530009a8ec19457d244b2d53ac36c8b30c889bb5979d58c9c78c2dd"},
 ]
 
 [package.dependencies]
@@ -501,8 +501,7 @@ config-formatter = "*"
 packaging = "*"
 requests = "*"
 "ruamel.yaml" = "*"
-toml-sort = "*"
-tomlkit = "*"
+toml-sort = ">=0.22.0"
 
 [[package]]
 name = "lazy-object-proxy"
@@ -981,14 +980,14 @@ files = [
 
 [[package]]
 name = "toml-sort"
-version = "0.20.0"
+version = "0.22.2"
 description = "Toml sorting library"
 category = "dev"
 optional = false
 python-versions = ">=3.7,<4.0"
 files = [
-    {file = "toml-sort-0.20.0.tar.gz", hash = "sha256:b8d259458b3036bd41297783da31d348d66af1eebda8bca9e736d535b66b5338"},
-    {file = "toml_sort-0.20.0-py3-none-any.whl", hash = "sha256:76d2cd1b9763bc4884cfb277b19da09ec06eaedc1e8d8c5d70acaf84b1f6980b"},
+    {file = "toml_sort-0.22.2-py3-none-any.whl", hash = "sha256:77f7d079439d2776a903bdb2c36438768dfd1ba17e1ca018aadee4f9e680e5f7"},
+    {file = "toml_sort-0.22.2.tar.gz", hash = "sha256:84e4c4e3ca1e747b1cb0a02e092191e4c7cb18c3b1eb412f0004390c21f8cb77"},
 ]
 
 [package.dependencies]
