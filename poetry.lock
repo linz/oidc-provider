@@ -544,13 +544,13 @@ typing-extensions = ">=3.7,<5.0"
 
 [[package]]
 name = "language-formatters-pre-commit-hooks"
-version = "2.8.0"
+version = "2.10.0"
 description = "List of pre-commit hooks meant to format your source code."
 optional = false
 python-versions = "*"
 files = [
-    {file = "language_formatters_pre_commit_hooks-2.8.0-py2.py3-none-any.whl", hash = "sha256:d7a88f8ee9739c301dfe3091fab0b3907dca466f4ab508d3e783d5c228072dd7"},
-    {file = "language_formatters_pre_commit_hooks-2.8.0.tar.gz", hash = "sha256:9df6216413856014b7677181d08cbe5f1922df213bb941545f4ed361498aebc6"},
+    {file = "language_formatters_pre_commit_hooks-2.10.0-py2.py3-none-any.whl", hash = "sha256:e31de7a86ab5209762c1315d368fef5c782a11f2ead63c96f8db4263d9ba7b5e"},
+    {file = "language_formatters_pre_commit_hooks-2.10.0.tar.gz", hash = "sha256:10575324a33c154e7c350eb6c941084c088eb49abe958675ea14c1f0bc1811e2"},
 ]
 
 [package.dependencies]
