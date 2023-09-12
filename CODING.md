@@ -1,25 +1,24 @@
-## Development
+# Development
+
+## Setup
+
+### Nix
+
+Prerequisites: [nix-direnv](https://github.com/nix-community/nix-direnv)
+
+Run `direnv allow` in the project root to enable the Nix environment every time you `cd` here.
+
+### Non-Nix
 
 Prerequisites:
 
-- Python 3.10
+- [Pyenv](https://github.com/pyenv/pyenv)
 - [Poetry](https://python-poetry.org/docs/#installation)
 
-Optional dependencies:
+1. Run `pyenv install` to use the reference Python version in `pyproject.toml`.
+1. Run `poetry install` to install the project dependencies.
 
-- [Pyenv](https://github.com/pyenv/pyenv) to use the reference Python version in `pyproject.toml`
-  with a simple `pyenv install`
+### Common
 
-Install the project dependencies:
-
-```bash
-poetry install
-```
-
-Install commit-msg git hook. It runs on every local commit to check if the commit message conforms
-to the convention specified in `.gitlint`
-
-```bash
-pre-commit install --hook-type commit-msg --overwrite
-pre-commit install --hook-type=pre-commit --overwrite
-```
+Run `pre-commit install --hook-type=commit-msg --hook-type=pre-commit --overwrite` to install
+pre-commit hooks. They will run linting and formatting when committing changes.
