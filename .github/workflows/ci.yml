@@ -12,7 +12,7 @@ jobs:
       fail-fast: false
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3.5.2
+      - uses: actions/checkout@v4.0.0
         with:
           fetch-depth: 0
 
@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: ${{ env.python_version }}
 
-      - uses: actions/cache@v3.3.1
+      - uses: actions/cache@v3.3.2
         with:
           path: ~/.cache/pip
           key:
@@ -42,13 +42,13 @@ jobs:
         run: python -m poetry install
 
       - name: Use Node.js for CDK deployment
-        uses: actions/setup-node@v3.6.0
+        uses: actions/setup-node@v3.8.1
         with:
           node-version-file: '.nvmrc'
           registry-url: https://registry.npmjs.org
 
       - name: Cache Node.js packages
-        uses: actions/cache@v3.3.1
+        uses: actions/cache@v3.3.2
         with:
           path: ~/.npm
           key:
@@ -80,7 +80,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@v3.5.2
+      - uses: actions/checkout@v4.0.0
       - uses: cachix/install-nix-action@v20
       - uses: cachix/cachix-action@v12
         with:
