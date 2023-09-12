@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: ${{ env.python_version }}
 
-      - uses: actions/cache@v3.3.1
+      - uses: actions/cache@v3.3.2
         with:
           path: ~/.cache/pip
           key:
@@ -48,7 +48,7 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Cache Node.js packages
-        uses: actions/cache@v3.3.1
+        uses: actions/cache@v3.3.2
         with:
           path: ~/.npm
           key:
