@@ -10,6 +10,14 @@ let
       name = "oidc-provider";
     };
     preferWheels = true;
+    overrides = pkgs.poetry2nix.overrides.withDefaults (self: super: {
+      aws-cdk-asset-node-proxy-agent-v6 = super.aws-cdk-asset-node-proxy-agent-v6.overridePythonAttrs (
+        # Upstream fix: https://github.com/nix-community/poetry2nix/pull/1306
+        old: {
+          nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [ self.setuptools ];
+        }
+      );
+    });
   };
 in
 poetryEnv.env.overrideAttrs (
@@ -20,7 +28,7 @@ poetryEnv.env.overrideAttrs (
       pkgs.gitFull
       pkgs.nodejs
       (pkgs.poetry.override {
-        inherit python;
+        python3 = python;
       })
       pkgs.which
     ];
