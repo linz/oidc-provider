@@ -9,7 +9,6 @@ let
       path = ./.;
       name = "oidc-provider";
     };
-    preferWheels = true;
     overrides = pkgs.poetry2nix.overrides.withDefaults (self: super: {
       aws-cdk-asset-node-proxy-agent-v6 = super.aws-cdk-asset-node-proxy-agent-v6.overridePythonAttrs (
         # Upstream fix: https://github.com/nix-community/poetry2nix/pull/1306
