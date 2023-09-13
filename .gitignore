@@ -1,9 +1,9 @@
 /cdk.out/
-/.idea
+/.idea/
 /.mypy_cache/
 *.pyc
-__pycache__
+__pycache__/
 /.pytest_cache
 Thumbs.db
-/.venv
-/.vscode
+/.venv/
+/.vscode/
