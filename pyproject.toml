@@ -41,9 +41,6 @@ language-formatters-pre-commit-hooks = "*"
 mypy = "*"
 pre-commit = "*"
 pylint = "*"
-pytest = "*"
-pytest-randomly = "*"
-typed-ast = "*"
 
 [tool.pylint.FORMAT]
 max-line-length = 127
