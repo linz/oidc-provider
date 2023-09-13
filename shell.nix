@@ -25,6 +25,7 @@ poetryEnv.env.overrideAttrs (
       pkgs.cacert
       pkgs.cargo
       pkgs.gitFull
+      pkgs.niv
       pkgs.nodejs
       (pkgs.poetry.override {
         python3 = python;
