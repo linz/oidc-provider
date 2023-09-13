@@ -30,7 +30,7 @@ name = "oidc-provider"
 version = "0.1.0"
 
 [tool.poetry.dependencies]
-aws-cdk-lib = "^2.95.1"
+aws-cdk-lib = "*"
 python = "^3.10"
 
 [tool.poetry.dev-dependencies]
