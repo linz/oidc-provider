@@ -18,6 +18,7 @@ let
       );
     });
   };
+  nodeEnv = pkgs.callPackage ./node2nix/default.nix { };
 in
 poetryEnv.env.overrideAttrs (
   oldAttrs: {
@@ -26,11 +27,13 @@ poetryEnv.env.overrideAttrs (
       pkgs.cargo
       pkgs.gitFull
       pkgs.niv
+      pkgs.node2nix
       pkgs.nodejs
       (pkgs.poetry.override {
         python3 = python;
       })
       pkgs.which
+      nodeEnv.shell.nodeDependencies
     ];
   }
 )
