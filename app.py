@@ -2,14 +2,12 @@
 CDK application entry point file.
 """
 import constructs
-from aws_cdk import App, CfnOutput, CfnParameter, Stack, aws_iam
+from aws_cdk import App, CfnParameter, Stack, aws_iam
 
 
 class OidcProviderStack(Stack):
     def __init__(self, scope: constructs.Construct, construct_id: str) -> None:
         super().__init__(scope, construct_id)
-
-        env_name = CfnParameter(self, "EnvName", type="String", description="The environment to deploy the OidcProviderStack")
 
         github_repo = CfnParameter(
             self,
@@ -29,8 +27,8 @@ class OidcProviderStack(Stack):
 
         oidc_deploy_role = aws_iam.Role(
             self,
-            "OidcDeployer",
-            role_name=f"{env_name.value_as_string}Oidc",
+            "GitHubOidcDeployer",
+            role_name="GitHubOidcDeployer",
             assumed_by=aws_iam.WebIdentityPrincipal(
                 f"arn:aws:iam::{account_id}:oidc-provider/token.actions.githubusercontent.com",
                 {
@@ -43,10 +41,6 @@ class OidcProviderStack(Stack):
         )
 
         oidc_deploy_role.add_managed_policy(aws_iam.ManagedPolicy.from_aws_managed_policy_name("AdministratorAccess"))
-
-        # Set Cfn to output deploy_role arn post CDK deployment.
-        # Assign or update this value in AWS_ASSUME_ROLE in GitHub secrets
-        CfnOutput(self, "ServiceAccountIamRole", value=oidc_deploy_role.role_arn)
 
 
 def main() -> None:
