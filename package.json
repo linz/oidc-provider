@@ -1,4 +1,5 @@
 {
+  "name": "oidc-provider",
   "dependencies": {
     "aws-cdk": "*"
   },
