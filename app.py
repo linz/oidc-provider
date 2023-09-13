@@ -29,7 +29,7 @@ class OidcProviderStack(Stack):
 
         oidc_deploy_role = aws_iam.Role(
             self,
-            "OidcDeployRole",
+            "OidcDeployer",
             role_name=f"{env_name.value_as_string}Oidc",
             assumed_by=aws_iam.WebIdentityPrincipal(
                 f"arn:aws:iam::{account_id}:oidc-provider/token.actions.githubusercontent.com",
@@ -52,7 +52,7 @@ class OidcProviderStack(Stack):
 def main() -> None:
     app = App()
 
-    OidcProviderStack(app, "OidcProviderStack")
+    OidcProviderStack(app, "OidcProvider")
 
     app.synth()
 
