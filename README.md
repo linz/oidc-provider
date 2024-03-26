@@ -19,16 +19,15 @@ based on a specific repo, event, branch, or tag. Please refer to GitHub document
 [Configuring OpenID Connect in Amazon Web Services](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
 for further information.
 
-A single AWS role is created as part of this stack. The role arn is provided as an output of this
-cdk and will be displayed post deployment. This should be referenced within GitHub workflows (i.e.
+A single AWS role is created as part of this stack. The role arn is
+`arn:aws:iam::ACCOUNT_ID:role/GitHubOidcDeployer`, with `ACCOUNT_ID` being the account ID (12-digit
+number) of the account you're logged into. This should be referenced within GitHub workflows (i.e.
 in your application stack) to manage deployment. The role policy should specify which AWS resources
 GitHub actions has access to.
 
 ### Prerequisites
 
 - An AWS account
-- A role policy which specifies the level of access GitHub actions has on AWS (referencing existing
-  AWS managed policy is allowed)
 - A GitHub repo with predetermined access restrictions (i.e. with reference matching a specific
   branch, event or tag)
 
@@ -40,17 +39,13 @@ for further information.
 ### How to Deploy
 
 This cdk stack can be deployed by running the following:  
-`cdk deploy --profile <profile-name> --GithubRepo=<github-repo> --EnvName=<environment-name>`
+`cdk deploy --profile=<profile-name> --GithubRepo=<github-repo>`
 
 where
 
 - `<profile-name>` references the
   [named profile for the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
 - `<github-repo>` references the GitHub repository that should be granted access to oidc
-- `<environment-name>` references to the application environment of your deployment  
-  This is used as part of the role creation name (e.g.
-  `arn:aws:iam::123456789:role/<environment-name>Oidc`) and is mostly useful in identifying which
-  account the role belongs to in a multi account setup.
 
 for example:  
-`cdk deploy --profile=li-geostore-ci --parameters=EnvName="Ci" --parameters=GithubRepo="linz/geostore:*"`
+`cdk deploy --profile=li-geostore-ci --parameters=GithubRepo="linz/geostore:*"`
