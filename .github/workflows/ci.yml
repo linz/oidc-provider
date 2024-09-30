@@ -81,7 +81,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4.2.0
-      - uses: cachix/install-nix-action@V27
+      - uses: cachix/install-nix-action@v29
       - uses: cachix/cachix-action@v15
         with:
           name: linz
